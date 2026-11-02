@@ -1,0 +1,14 @@
+:root { color-scheme: dark; font-family: system-ui, sans-serif; background: #08090d; color: #eee; }
+* { box-sizing: border-box; }
+body { max-width: 60rem; margin: auto; padding: 1.25rem; padding-bottom: max(2rem, env(safe-area-inset-bottom)); }
+header { border-bottom: 1px solid #444; margin-bottom: 2rem; }
+form { display: grid; gap: .75rem; max-width: 28rem; }
+button, input, .app { font: inherit; min-height: 44px; padding: .8rem; border: 1px solid #647080; border-radius: .5rem; }
+button { cursor: pointer; background: #d3b8f5; color: #111; touch-action: manipulation; }
+input { background: #11141c; color: inherit; width: 100%; }
+nav { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); gap: 1rem; margin: 1rem 0; }
+.app { display: block; color: #d3b8f5; text-decoration: none; overflow-wrap: anywhere; }
+.app p { color: #ddd; }
+:focus-visible { outline: 3px solid #acebd1; outline-offset: 3px; }
+.skip:not(:focus) { position: absolute; width: 1px; height: 1px; overflow: hidden; }
+[hidden] { display: none !important; }

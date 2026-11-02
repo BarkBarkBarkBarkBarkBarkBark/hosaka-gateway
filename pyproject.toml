@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hosaka-gateway"
+version = "0.1.0"
+description = "Generic local web gateway for approved Hosaka extensions"
+requires-python = ">=3.10"
+dependencies = [
+  "fastapi>=0.116,<1",
+  "httpx>=0.28,<1",
+  "uvicorn[standard]>=0.35,<1",
+  "websockets>=14,<16",
+  "PyYAML>=6,<7",
+  "jsonschema>=4.21,<5",
+]
+
+[project.scripts]
+hosaka-gateway = "hosaka_gateway.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["hosaka_gateway*"]
+
+[tool.setuptools.package-data]
+hosaka_gateway = ["static/*"]
